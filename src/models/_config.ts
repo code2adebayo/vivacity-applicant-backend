@@ -2,20 +2,6 @@ import { Sequelize } from 'sequelize';
 import env from '../env';
 const { USER, HOST, PASSWORD, PORT, DB_NAME } = env.POSTGRES;
 
-/* const sequelize = new Sequelize(DB_NAME, USER, PASSWORD, {
-    host: HOST,
-    port: PORT,
-    dialect: "postgres",
-    logging: true,
-    minifyAliases: true,
-    pool: {
-        max: 20,
-        min: 0,
-        acquire: 30000,
-        idle: 10000
-    }
-}); */
-
 const sequelize = new Sequelize('Vivacity', "postgres", "netry56Jandon", {
     host: "localhost",
     port: 5432,

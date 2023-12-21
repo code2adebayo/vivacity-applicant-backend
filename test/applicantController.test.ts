@@ -48,8 +48,6 @@ jest.mock('../src/models/applicants.model');
       });
     });
   
-    // Add more test cases for other methods...
-  
     // Remember to reset mocks after each test
     afterEach(() => {
       jest.clearAllMocks();
@@ -169,8 +167,6 @@ describe('ApplicantControl deleteAll Method', () => {
 
 
 describe('ApplicantControl DeleteOne', () => {
-  /* let req: Partial<Request>;
-  let res: Partial<Response>; */
 
   beforeEach(() => {
     req = { body: { id: 1 } };
@@ -239,8 +235,6 @@ describe('ApplicantControl DeleteOne', () => {
 
 
 describe('ApplicantControl fetchByName', () => {
-  /* let req: Partial<Request>;
-  let res: Partial<Response>; */
 
   beforeEach(() => {
     req = {
@@ -307,7 +301,6 @@ describe('ApplicantControl fetchByName', () => {
     req.body = { fullName: 'JOHN' };
 
     // Mock findOne to return a sample record
-    // ApplicantModel.findOne.mockResolvedValue(fakeApplicant);
     (ApplicantModel.findAll as jest.Mock).mockResolvedValue(fakeApplicant);
 
     await ApplicantControl.fetchByName(req as Request, res as Response);
@@ -340,9 +333,6 @@ describe('ApplicantControl fetchByName', () => {
 
 
  describe('ApplicantControl FetchOne', () => {
-     /*    let req: Partial<Request>;
-  let res: Partial<Response>; */
-      
         beforeEach(() => {
           req = {
             query: {},
@@ -394,8 +384,6 @@ describe('ApplicantControl fetchByName', () => {
 
 
       describe('ApplicantControl updateOne', () => {
-       /*  let req: Partial<Request>;
-        let res: Partial<Response>; */
       
         beforeEach(() => {
           req = {} as Request;
@@ -435,8 +423,6 @@ describe('ApplicantControl fetchByName', () => {
             error: { message: 'no match data found' },
           });
         });
-      
-        
       
         // Remember to reset mocks after each test
         afterEach(() => {
